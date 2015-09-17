@@ -49,3 +49,32 @@ Create a class that defines ShoppingListItem.
 ShoppingListItem will have all the properties and methods defined in the BDD spec above.
 */
 
+
+
+/*----------------------------------------*/
+// shopping list
+
+function ShoppingList() {
+  this.items = [];
+}
+
+ShoppingList.prototype.addItem = function(stuff) {
+  if(this.items instanceof ShoppingListItem) {
+    this.items.push(stuff);
+  }else{
+    throw new Error('must be type of shopping list item');
+  }
+};
+
+ShoppingList.prototype.removeItem = function(stuff) {
+  if(this.items instanceof ShoppingListItem) {
+    //remove item
+    this.items.splice(stuff);
+  }else{
+    throw new Error('can not remove item');
+  }
+};
+
+ShoppingList.prototype.render = function() {
+  return '<ul>...[all the li elements from ShoppingListItem.render()]...</ul>';
+};
