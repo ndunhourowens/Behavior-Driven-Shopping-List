@@ -59,7 +59,7 @@ function ShoppingList() {
 }
 
 ShoppingList.prototype.addItem = function(stuff) {
-  if(this.items instanceof ShoppingListItem) {
+  if(stuff instanceof ShoppingListItem) {
     this.items.push(stuff);
   }else{
     throw new Error('must be type of shopping list item');
@@ -67,9 +67,10 @@ ShoppingList.prototype.addItem = function(stuff) {
 };
 
 ShoppingList.prototype.removeItem = function(stuff) {
-  if(this.items instanceof ShoppingListItem) {
+  if(stuff instanceof ShoppingListItem) {
     //remove item
-    this.items.splice(stuff);
+    var index = this.items.indexOf(stuff);
+    this.items.splice(index, 1);
   }else{
     throw new Error('can not remove item');
   }
