@@ -1,6 +1,25 @@
+//ShoppingListItem is a class
+function ShoppingListItem(name, description, is_done) {
+  this.name = name;
+  this.description = description;
+  this.is_done = is_done;
+}
+
+ShoppingListItem.prototype.check = function(is_done) {
+  this.is_done = true;
+};
+
+ShoppingListItem.prototype.uncheck = function(is_done) {
+  this.is_done = false;
+};
+
+ShoppingListItem.prototype.render = function() {
+  return '<li class="completed_'+ this.is_done +'"><span>'+ this.name +'</span><span>'+ this.description +'</span></li>';
+};
+
+
 /*
 
-ShoppingListItem is a class
 ShoppingListItem has a property named name
 ShoppingListItem has a property named description
 ShoppingListItem has a property named is_done

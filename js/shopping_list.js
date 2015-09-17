@@ -1,14 +1,15 @@
 
 
-//ShoppingList is a class
+//ShoppingList has a property named items
 function ShoppingList() {
 
 };
 
 /*
-ShoppingList has a property named items
-ShoppingList has a constructor method that initializes items as an empty Array
-ShoppingList has a method named addItem that accepts a single ShoppingListItem argument
+ShoppingList has a constructor method that initializes items as an
+  empty Array
+ShoppingList has a method named addItem that accepts a single
+  ShoppingListItem argument
 invoking the addItem method by passing in a ShoppingListItem object should add that object to the items array
 invoking the addItem method by passing in anything else that is not a ShoppingListItem object should immediately throw an error
 ShoppingList has a method named removeItem that accepts a single ShoppingListItem argument
