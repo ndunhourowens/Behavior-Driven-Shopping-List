@@ -1,0 +1,27 @@
+<!-- standard html5 document before the end of this body tag, include your test library dependencies and your test file.
+
+you should be able to run your tests with all tests failing, commit and push your work.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="mocha"></div>
+
+
+  <script src="/node_modules/chai/chai.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.3.2/mocha.min.js"></script>
+
+  <script>mocha.setup('bdd');</script>
+
+  <script src="js/shopping_list_test.js"></script>
+  <script >mocha.run();</script>
+
+
+</body>
+</html>
