@@ -28,7 +28,8 @@ function wtf2() {
 function textField() {
   // document.getElementById('content').innerHTML = "mother fucker worked!!!!!!!!!";
   // adding to a list
-  document.getElementById('description').value = document,getElementById('title').value
+  document.getElementById('content').value = document,getElementById('title').;
+
 }
 
 // Create an add_to_shopping_list function that will read the value of the title and description fields, then create a new variable named new_shopping_list_item that will store the result of constructing a new ShoppingListItem and passing in the values of title and description.
