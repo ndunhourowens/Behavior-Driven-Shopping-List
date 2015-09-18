@@ -27,7 +27,6 @@ ShoppingListItem.prototype.uncheck = function(is_done) {
 ShoppingListItem.prototype.render = function() {
   return '<li class="completed_'+ this.is_done +'"><span>'+ this.name +'</span><span>'+ this.description +'</span></li>';
 };
-var stuffAtStore = new ShoppingListItem('roach', 'crunchy', true);
 
 
 /*----------------------------------------*/
@@ -40,36 +39,18 @@ function ShoppingList() {
 
 // addItem
 ShoppingList.prototype.addItem = function(stuff) {
-  if (stuff instanceof ShoppingListItem) {
+
     this.items.push(stuff);
     console.log(this.items);
-    return true;
-  }
 
-  // }else{
-  //   throw new Error('must be type of shopping list item');
-  // }
 };
 
 ShoppingList.prototype.removeItem = function(stuff) {
-  if(stuff instanceof ShoppingListItem) {
-    var index = this.items.indexOf(shoppingListItem);
+    var index = this.items.indexOf(ShoppingListItem);
     this.items.splice(index, 1);
-  }
 
-    //remove item
-  // }else{
-  //   throw new Error('can not remove item');
-  // }
 };
 // ShoppingList.prototype.render = function() {
 //   return '<ul><li class="completed_'+ this.is_done +'"><span>'+ this.name +'</span><span>'+ this.description +'</span></li></ul>';
 // };
 
-var sams = new ShoppingList();
-  sams.addItem('tylonel');
-  sams.addItem('advil');
-  sams.addItem('shot of chocolate cake');
-  sams.removeItem('tylonel');
-
-console.log(sams.items);
