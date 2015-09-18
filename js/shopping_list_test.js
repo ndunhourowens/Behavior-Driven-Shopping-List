@@ -7,6 +7,10 @@ describe('ShoppingListItem', function() {
   var list = new ShoppingList();
   var item = new ShoppingList('item');
   var sams = new ShoppingList();
+  sams.addItem('tylonel');
+  sams.addItem('advil');
+  sams.addItem('shot of chocolate cake');
+  sams.removeItem('tylonel');
 
 
   it('should be a function', function() {
