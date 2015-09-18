@@ -50,7 +50,7 @@ ShoppingList.prototype.removeItem = function(stuff) {
     this.items.splice(index, 1);
 
 };
-// ShoppingList.prototype.render = function() {
-//   return '<ul><li class="completed_'+ this.is_done +'"><span>'+ this.name +'</span><span>'+ this.description +'</span></li></ul>';
-// };
+ShoppingList.prototype.render = function() {
+  return '<ul><li class="completed_'+ this.is_done +'"><span>'+ this.name +'</span><span>'+ this.description +'</span></li></ul>';
+};
 
