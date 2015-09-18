@@ -43,13 +43,14 @@ describe('ShoppingListItem', function() {
     apple.render().should.equal ('<li class="completed_false"><span>apple</span><span>cripsy</span></li>');
   });
 
-
+});
 
   // shopping list
 
 /*================================================*/
 describe('ShoppingList', function() {
 
+  var empty = new ShoppingList();
   var sams = new ShoppingList();
   sams.addItem('tylonel');
   sams.addItem('advil');
@@ -65,37 +66,33 @@ describe('ShoppingList', function() {
   });
   //empty array
   it('should have an empty array', function() {
-    sams.items.should.be.empty;
+    empty.items.should.be.empty;
   });
-
-
-
-
-  it('should have a method addItem', function() {
-    ShoppingList.should.have.length(1);
+  it('should have a addItem method', function() {
+    expect(sams.addItem).to.be.a('function');
   });
   it('should addItem in to array', function() {
-    list.addItem(item).should.be.equal.true;
-    list.item.should.have.length(1);
+    sams.addItem(item).should.be.equal.true;
+    sams.item.should.have('advil');
   });
-  it('throw error message', function() {
-    sams.addItem().to.throw(Error);
+  it('throw error message for addItem', function() {
+    expect(sams.addItem).to.throw(Error);
   });
+
 
 
   //removeItem
-  it('throw error message', function() {
-    sams.removeItem().to.throw(Error);
+  it('should have a removeItem method', function() {
+    expect(sams.removeItem).to.be.a('function');
   });
-  it('throw error message', function() {
-    expect(ShoppingList.addItem).to.throw(Error);
+  it('throw error message for removeItem', function() {
+    expect(sams.removeItem).to.throw(Error);
   });
 
   it('should render the list of items on the list', function() {
-    result.should.equal('<ul>...[all the li elements from ShoppingListItem.render()]...</ul>');
+    render.should.equal('<ul><li class="completed_'+ this.is_done +'"><span>'+ this.name +'</span><span>'+ this.description +'</span></li></ul>');
   });
 
 
 
-});
 });
