@@ -1,34 +1,27 @@
-
-<!-- Create a form that has 2 text fields, title and description.
-
-Add a button element with the contents of "Add to Shopping List", and give it an id of add_shopping_list_item_button.
-
-Add a click event handler to the add_shopping_list_item_button that will run a function called add_to_shopping_list(). http://www.w3schools.com/jsref/event_onclick.asp
-
-
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
-
-
-  <link rel="stylesheet" href="node_modules/mocha/mocha.css">
+  <title>Shopping List </title>
 </head>
+
+
 <body>
 
-  <div id="mocha"></div>
 
+<div>
+  Title: <input type="text" name="title">
+  <button onclick="add_to_shopping_list()" id='add_shopping_list_button'>Add to the Shoping List</button>
 
-  <script src="/node_modules/chai/chai.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.3.2/mocha.min.js"></script>
+</div>
 
-  <script>mocha.setup('bdd');</script>
+<div>
+  Description: <input type="text" name="desccription">
+  <button onclick="">Remove from the list</button>
+</div>
 
-  <script src="js/shopping_list_test.js"></script>
-  <script >mocha.run();</script>
+s
+
 
 
 
