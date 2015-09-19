@@ -1,11 +1,11 @@
 //ShoppingListItem is a class
-function ShoppingListItem(name, description, is_done) {
+function ShoppingListItem(name, description) {
 // ShoppingListItem has a property named name
 // ShoppingListItem has a property named description
 // ShoppingListItem has a constructor method that accepts 2 arguments, name and description
   this.name = name;
   this.description = description;
-  this.is_done = is_done;
+  this.is_done = false;
 }
 // ShoppingListItem has a property named is_done
 // the constructor method sets the new instances name and description properties using the arguments passed in
@@ -34,6 +34,7 @@ ShoppingListItem.prototype.render = function() {
 
 function ShoppingList() {
   this.items = [];
+  console.log('in the ShoppingList', this.items);
 }
 
 
@@ -51,6 +52,9 @@ ShoppingList.prototype.removeItem = function(stuff) {
 
 };
 ShoppingList.prototype.render = function() {
-  return '<ul><li class="completed_'+ this.is_done +'"><span>'+ this.name +'</span><span>'+ this.description +'</span></li></ul>';
+   console.log('in render')
+  // return '<ul><li class="completed_'+ this.is_done +'"><span>'+ this.name +'</span><span>'+ this.description +'</span></li></ul>';
+  return 'render. what the fuck';
+
 };
 
