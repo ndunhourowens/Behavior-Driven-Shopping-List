@@ -1,7 +1,7 @@
 // Create an instance of ShoppingList.
 var groceryList = new ShoppingList();
-var render = groceryList.render();
-document.getElementById("content").innerHTML = groceryList.render();
+// var render = groceryList.render();
+// document.getElementById("content").innerHTML = groceryList.render();
 
 // Invoke the shopping_list object's render() method, and store the output
 //to a variable. Write the resulting output html into the
@@ -17,7 +17,7 @@ function add_to_shopping_list() {
   console.log(descBox);
   console.log();
 
-
+  document.getElementById('content').innerHTML = groceryList.render();
 
 /*=============================================================*
 | var textContent = document.getElementById("title").value;
