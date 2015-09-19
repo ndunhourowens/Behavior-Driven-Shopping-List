@@ -52,7 +52,7 @@ ShoppingList.prototype.removeItem = function(stuff) {
 
 };
 ShoppingList.prototype.render = function() {
-   console.log('in render')
+   console.log('in render');
   // return '<ul><li class="completed_'+ this.is_done +'"><span>'+ this.name +'</span><span>'+ this.description +'</span></li></ul>';
   return 'render. what the fuck';
 

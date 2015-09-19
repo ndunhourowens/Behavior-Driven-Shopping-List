@@ -15,7 +15,9 @@ function add_to_shopping_list() {
   groceryList.addItem(item);
   console.log(titleBox);
   console.log(descBox);
-  console.log(groceryList.items);
+  console.log();
+
+
 
 /*=============================================================*
 | var textContent = document.getElementById("title").value;
