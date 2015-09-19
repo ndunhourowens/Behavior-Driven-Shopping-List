@@ -25,7 +25,7 @@ ShoppingListItem.prototype.uncheck = function(is_done) {
 // ShoppingListItem has a method named render
 // calling the instance's render method will construct and return an html formatted string
 ShoppingListItem.prototype.render = function() {
-  return '<li class="completed_'+ this.is_done +'"><span>'+ this.name + ' ' +'</span><span>'+ this.description +'</span></li>';
+  return '<li class="completed_'+ this.is_done +'"><span><input type="checkbox"></span><span>'+ this.name + ' ' +'</span><span>'+ this.description +'</span><span><input type="checkbox"></span></li>';
 };
 
 
