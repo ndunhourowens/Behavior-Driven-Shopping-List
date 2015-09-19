@@ -25,7 +25,7 @@ ShoppingListItem.prototype.uncheck = function(is_done) {
 // ShoppingListItem has a method named render
 // calling the instance's render method will construct and return an html formatted string
 ShoppingListItem.prototype.render = function() {
-  return '<li class="completed_'+ this.is_done +'"><span>'+ this.name +'</span><span>'+ this.description +'</span></li>';
+  return '<li class="completed_'+ this.is_done +'"><span>'+ this.name + ' ' +'</span><span>'+ this.description +'</span></li>';
 };
 
 
@@ -52,9 +52,11 @@ ShoppingList.prototype.removeItem = function(stuff) {
 
 };
 ShoppingList.prototype.render = function() {
-   console.log('in render');
-  // return '<ul><li class="completed_'+ this.is_done +'"><span>'+ this.name +'</span><span>'+ this.description +'</span></li></ul>';
-  return 'render. what the fuck';
-
+   var str = '<ul>';
+   for (var i = 0; i < this.items.length; i++) {
+      str += this.items[i].render();
+   }
+  // return 'render. what the fuck';
+  return str + '</ul>';
 };
 
