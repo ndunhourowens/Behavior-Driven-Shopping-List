@@ -15,9 +15,9 @@ function add_to_shopping_list() {
   groceryList.addItem(item);
   console.log(titleBox);
   console.log(descBox);
-  console.log();
 
   document.getElementById('content').innerHTML = groceryList.render();
+  console.log('add2shoppingList', item.id);
 
 /*=============================================================*
 | var textContent = document.getElementById("title").value;
@@ -27,7 +27,25 @@ function add_to_shopping_list() {
 *=============================================================*/
 }
 
+function changeCheckStatus() {
+  // document.getElementById("checkbox_' + id + '").addEventListener('change', changeCheckStatus);
+  // var titleBox2 = document.getElementById("title").value;
+  // var descBox2 = document.getElementById("description").value;
 
+  // var thing = new ShoppingListItem(titleBox2, descBox2);
+
+  var textContent = document.getElementById("title").value;
+  document.getElementById('daPlace').innerHTML = textContent;
+  console.log('changeCheckStatus');
+
+  // if(onchange is true) {
+
+  // }else{
+
+  // };
+  //console.log('checking the id', checkTheBoxes.id);
+
+}
 // Create an add_to_shopping_list function that will read the value of the title and description fields, then create a new variable named new_shopping_list_item that will store the result of constructing a new ShoppingListItem and passing in the values of title and description.
 
 // Invoke your shopping list's addItem by passing in your new_shopping_list_item.

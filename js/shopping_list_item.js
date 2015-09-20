@@ -59,4 +59,3 @@ ShoppingList.prototype.render = function() {
   // return 'render. what the fuck';
   return str + '</ul>';
 };
-
